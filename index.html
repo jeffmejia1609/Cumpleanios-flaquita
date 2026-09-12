@@ -1,0 +1,2699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños flaquita 💗</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+    background:
+        radial-gradient(circle at 20% 15%, #fff8d9 0, transparent 30%),
+        radial-gradient(circle at 85% 25%, #ffd7e7 0, transparent 30%),
+        linear-gradient(135deg,#ffd8de,#ffeccf,#dbeeff);
+    color:#4f2e2e;
+}
+
+.screen{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+    transition:opacity .65s ease, transform .65s ease;
+    overflow:auto;
+}
+
+.screen.hide{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(.96);
+}
+
+.screen.show{
+    opacity:1;
+    pointer-events:auto;
+    transform:scale(1);
+}
+
+/* Fondo */
+.bg-balloon{
+    position:absolute;
+    width:100px;
+    height:125px;
+    border-radius:50% 50% 48% 48%;
+    opacity:.55;
+    animation:balloonFloat 6s ease-in-out infinite;
+}
+
+.bg-balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:160px;
+    background:rgba(100,80,80,.28);
+    left:50%;
+    top:118px;
+}
+
+.balloon1{ background:#ff90ad; left:5%; top:9%; }
+.balloon2{ background:#81b9ff; right:7%; top:8%; animation-delay:-2s; }
+.balloon3{ background:#ffd46b; right:18%; bottom:5%; animation-delay:-4s; }
+
+@keyframes balloonFloat{
+    0%,100%{ transform:translateY(0) rotate(-2deg); }
+    50%{ transform:translateY(-18px) rotate(2deg); }
+}
+
+/* Inicio */
+.intro-container{
+    width:min(1150px,100%);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.intro-text{
+    background:rgba(255,255,255,.62);
+    backdrop-filter:blur(16px);
+    border:2px solid rgba(255,255,255,.7);
+    border-radius:34px;
+    padding:45px;
+    box-shadow:0 25px 60px rgba(83,45,58,.13);
+}
+
+.intro-text h1{
+    font-size:clamp(2.7rem,5vw,5rem);
+    line-height:1;
+    color:#8d2755;
+    margin-bottom:18px;
+    text-shadow:0 3px 0 white;
+}
+
+.intro-text p{
+    font-size:1.15rem;
+    line-height:1.7;
+    margin-bottom:28px;
+    color:#694858;
+}
+
+.start-button{
+    border:none;
+    padding:17px 30px;
+    border-radius:999px;
+    font-size:1.08rem;
+    font-weight:800;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(135deg,#ff5c95,#ff7c76);
+    box-shadow:0 12px 25px rgba(255,70,125,.3);
+    transition:.25s;
+}
+
+.start-button:hover{
+    transform:translateY(-4px) scale(1.04);
+}
+
+/* Mono */
+.monkey-stage{
+    min-height:600px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    perspective:1100px;
+}
+
+.monkey{
+    width:410px;
+    height:540px;
+    position:relative;
+    animation:monkeyFloat 3s ease-in-out infinite;
+    filter:drop-shadow(0 25px 18px rgba(76,40,25,.15));
+}
+
+@keyframes monkeyFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-12px); }
+}
+
+.monkey-ear{
+    position:absolute;
+    width:115px;
+    height:115px;
+    background:radial-gradient(circle at 35% 30%,#ba7a52,#7c4a32);
+    border-radius:50%;
+    top:105px;
+    box-shadow:inset -8px -10px 18px rgba(0,0,0,.12);
+}
+
+.monkey-ear::after{
+    content:"";
+    position:absolute;
+    inset:22px;
+    border-radius:50%;
+    background:#dda47b;
+}
+
+.monkey-ear.left{ left:25px; }
+.monkey-ear.right{ right:25px; }
+
+.monkey-head{
+    position:absolute;
+    width:270px;
+    height:255px;
+    left:70px;
+    top:55px;
+    border-radius:48% 48% 45% 45%;
+    background:radial-gradient(circle at 35% 23%,#ad704d,#71452f 78%);
+    box-shadow:inset -12px -14px 25px rgba(0,0,0,.12);
+}
+
+.monkey-face{
+    position:absolute;
+    width:200px;
+    height:175px;
+    left:105px;
+    top:115px;
+    border-radius:48% 48% 45% 45%;
+    background:radial-gradient(circle at 40% 25%,#ffd6af,#dfa177);
+    z-index:4;
+    box-shadow:inset -7px -9px 15px rgba(121,60,30,.08);
+}
+
+.monkey-eye{
+    position:absolute;
+    width:46px;
+    height:58px;
+    top:155px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#fff 0 7%,#5c3524 9% 35%,#1f1410 40% 100%);
+    z-index:6;
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+
+.monkey-eye.left{ left:130px; }
+.monkey-eye.right{ right:130px; }
+
+.monkey-nose{
+    position:absolute;
+    width:28px;
+    height:18px;
+    background:#9e5c45;
+    border-radius:50%;
+    top:215px;
+    left:191px;
+    z-index:7;
+}
+
+.monkey-mouth{
+    position:absolute;
+    width:70px;
+    height:38px;
+    border-bottom:7px solid #743922;
+    border-radius:0 0 60px 60px;
+    top:220px;
+    left:170px;
+    z-index:7;
+}
+
+.monkey-body{
+    position:absolute;
+    width:250px;
+    height:250px;
+    left:80px;
+    top:270px;
+    border-radius:48% 48% 35% 35%;
+    background:radial-gradient(circle at 35% 20%,#a66847,#70442f);
+    box-shadow:inset -12px -14px 25px rgba(0,0,0,.12);
+}
+
+.monkey-belly{
+    position:absolute;
+    width:140px;
+    height:155px;
+    left:135px;
+    top:315px;
+    border-radius:50%;
+    background:#dba47c;
+    z-index:3;
+}
+
+.monkey-arm{
+    position:absolute;
+    width:52px;
+    height:190px;
+    border-radius:35px;
+    top:295px;
+    background:linear-gradient(135deg,#925c41,#6a402d);
+    z-index:4;
+}
+
+.monkey-arm.left{ left:75px; transform:rotate(31deg); }
+.monkey-arm.right{ right:75px; transform:rotate(-31deg); }
+
+/* Pastel del mono */
+.monkey-cake{
+    position:absolute;
+    width:260px;
+    height:155px;
+    left:75px;
+    bottom:40px;
+    z-index:10;
+    animation:cakeFloat 2.3s ease-in-out infinite;
+}
+
+@keyframes cakeFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-5px); }
+}
+
+.monkey-cake-body{
+    position:absolute;
+    left:25px;
+    bottom:10px;
+    width:210px;
+    height:110px;
+    border-radius:10px 10px 25px 25px;
+    background:linear-gradient(90deg,#ef8c13 0 20%,#ffc914 20% 80%,#ef8c13 80%);
+    box-shadow:inset 0 -8px 0 rgba(153,76,0,.12),0 10px 17px rgba(0,0,0,.18);
+}
+
+.monkey-cake-cream1,
+.monkey-cake-cream2{
+    position:absolute;
+    width:215px;
+    height:15px;
+    left:22px;
+    border-radius:50%;
+    background:white;
+    border-bottom:4px solid #a3d9ff;
+    z-index:12;
+}
+
+.monkey-cake-cream1{ bottom:45px; }
+.monkey-cake-cream2{ bottom:80px; }
+
+.monkey-cake-red{
+    position:absolute;
+    width:220px;
+    height:56px;
+    left:20px;
+    bottom:103px;
+    background:#ff2027;
+    border-radius:50% 50% 20% 20%;
+    z-index:14;
+    box-shadow:inset 0 -8px 0 rgba(180,0,18,.22);
+}
+
+.monkey-cake-red::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-18px;
+    height:40px;
+    background:
+        radial-gradient(ellipse at 10% 0,#ff2027 0 18px,transparent 19px),
+        radial-gradient(ellipse at 30% 0,#ff2027 0 20px,transparent 21px),
+        radial-gradient(ellipse at 50% 0,#ff2027 0 23px,transparent 24px),
+        radial-gradient(ellipse at 70% 0,#ff2027 0 18px,transparent 19px),
+        radial-gradient(ellipse at 90% 0,#ff2027 0 22px,transparent 23px);
+    background-repeat:no-repeat;
+}
+
+.monkey-cake-plate{
+    position:absolute;
+    width:255px;
+    height:24px;
+    bottom:0;
+    left:2px;
+    background:#ffd52b;
+    border-radius:50%;
+    box-shadow:inset 0 -5px 0 #dd9210;
+}
+
+/* Juego */
+.game-container{
+    width:min(1200px,100%);
+    display:grid;
+    grid-template-columns:minmax(600px,1fr) 290px;
+    gap:28px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.cake-panel{
+    background:rgba(255,255,255,.62);
+    backdrop-filter:blur(14px);
+    border-radius:40px;
+    padding:30px 20px 20px;
+    box-shadow:0 25px 60px rgba(84,40,60,.14);
+    border:2px solid rgba(255,255,255,.8);
+}
+
+.game-title{
+    text-align:center;
+    color:#8c2853;
+    font-size:clamp(2rem,4vw,3rem);
+}
+
+.game-subtitle{
+    text-align:center;
+    margin-top:7px;
+    color:#6e5662;
+    font-size:1.05rem;
+}
+
+.cake-scene{
+    position:relative;
+    width:700px;
+    height:590px;
+    max-width:100%;
+    margin:0 auto;
+    transform-origin:top center;
+}
+
+.big-plate{
+    position:absolute;
+    width:610px;
+    height:65px;
+    border-radius:50%;
+    background:linear-gradient(#ffd527,#ffad12);
+    border:5px solid #d37a00;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:0 18px 25px rgba(77,42,15,.15);
+}
+
+.cake-body{
+    position:absolute;
+    width:545px;
+    height:265px;
+    left:50%;
+    bottom:70px;
+    transform:translateX(-50%);
+    border-radius:18px 18px 35px 35px;
+    background:linear-gradient(90deg,#ef8a0a 0 17%,#ffc617 17% 83%,#ef8a0a 83%);
+    border:5px solid #bd6500;
+    box-shadow:inset 0 -10px 0 rgba(176,79,0,.12),0 14px 25px rgba(75,37,17,.14);
+}
+
+.cream-band{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:560px;
+    height:32px;
+    background:white;
+    border:4px solid #9bd7ff;
+    border-left:none;
+    border-right:none;
+    border-radius:50%;
+    z-index:15;
+}
+
+.cream-band.one{ bottom:165px; }
+.cream-band.two{ bottom:250px; }
+
+.red-icing{
+    position:absolute;
+    width:565px;
+    height:130px;
+    left:50%;
+    bottom:310px;
+    transform:translateX(-50%);
+    border-radius:50% 50% 25% 25%;
+    background:linear-gradient(#ff3137,#ff131f);
+    border:5px solid #bf0010;
+    z-index:20;
+    box-shadow:inset 0 -10px 0 rgba(167,0,19,.18);
+}
+
+.red-icing::after{
+    content:"";
+    position:absolute;
+    left:-4px;
+    right:-4px;
+    bottom:-47px;
+    height:65px;
+    background:
+        radial-gradient(ellipse at 8% 0,#ff151f 0 38px,transparent 39px),
+        radial-gradient(ellipse at 25% 0,#ff151f 0 45px,transparent 46px),
+        radial-gradient(ellipse at 44% 0,#ff151f 0 34px,transparent 35px),
+        radial-gradient(ellipse at 61% 0,#ff151f 0 46px,transparent 47px),
+        radial-gradient(ellipse at 79% 0,#ff151f 0 35px,transparent 36px),
+        radial-gradient(ellipse at 95% 0,#ff151f 0 43px,transparent 44px);
+    background-repeat:no-repeat;
+}
+
+.sprinkles{
+    position:absolute;
+    width:525px;
+    height:105px;
+    left:50%;
+    bottom:321px;
+    transform:translateX(-50%);
+    z-index:28;
+    pointer-events:none;
+}
+
+.sprinkle{
+    position:absolute;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,white 0 20%,#c9f3ff 22% 45%,#63bdeb 48% 100%);
+    border:2px solid #489bd0;
+    box-shadow:0 2px 3px rgba(0,0,0,.12);
+}
+
+
+.candles{
+    position:absolute;
+    width:520px;
+    height:260px;
+    left:50%;
+
+    bottom:310px;
+
+    transform:translateX(-50%);
+    z-index:40;
+}
+
+.candle{
+    position:absolute;
+    width:15px;
+
+
+    height:70px;
+
+    border-radius:7px 7px 4px 4px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #ffffff 0 5px,
+            #d4efff 5px 8px,
+            #ffffff 8px 13px
+        );
+    border:3px solid #70b5e4;
+    cursor:pointer;
+    transition:transform .22s, filter .25s;
+    box-shadow:0 5px 8px rgba(0,0,0,.12);
+}
+
+.candle:hover{
+    transform:scale(1.13) translateY(-4px);
+}
+
+.flame{
+    position:absolute;
+    width:28px;
+    height:44px;
+    left:50%;
+    top:-44px;
+    transform:translateX(-50%);
+    border-radius:60% 40% 55% 45%;
+    background:
+        radial-gradient(
+            ellipse at 50% 70%,
+            #fff7a3 0 19%,
+            #ffe513 22% 48%,
+            #ff9e00 52% 75%,
+            #ff6200 78%
+        );
+    filter:drop-shadow(0 0 8px #ffba13);
+    transform-origin:center bottom;
+    animation:flameMove .7s ease-in-out infinite alternate;
+    transition:opacity .3s, transform .3s;
+}
+
+@keyframes flameMove{
+    from{ transform:translateX(-50%) rotate(-4deg) scale(.95); }
+    to{ transform:translateX(-50%) rotate(4deg) scale(1.07); }
+}
+
+.candle.off .flame{
+    animation:none;
+    opacity:0;
+    transform:translateX(-50%) scale(.05);
+}
+
+.wick{
+    position:absolute;
+    width:3px;
+    height:9px;
+    background:#2a2424;
+    top:-9px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:3;
+}
+
+.smoke{
+    position:absolute;
+    width:12px;
+    height:25px;
+    top:-33px;
+    left:50%;
+    border-radius:50%;
+    background:rgba(130,130,130,.5);
+    opacity:0;
+    filter:blur(4px);
+    pointer-events:none;
+}
+
+.candle.off .smoke{
+    animation:smokeUp 1.2s ease-out;
+}
+
+@keyframes smokeUp{
+    0%{
+        opacity:.7;
+        transform:translate(-50%,0) scale(.5);
+    }
+    100%{
+        opacity:0;
+        transform:translate(-50%,-60px) scale(1.8);
+    }
+}
+
+/* Contador */
+.status-panel{
+    background:rgba(255,255,255,.7);
+    backdrop-filter:blur(14px);
+    border:2px solid rgba(255,255,255,.8);
+    border-radius:30px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(92,50,70,.15);
+}
+
+.status-panel h3{
+    color:#704258;
+    margin-bottom:13px;
+}
+
+.counter{
+    font-size:3rem;
+    font-weight:900;
+    color:#e3316b;
+    margin-bottom:18px;
+}
+
+.progress{
+    width:100%;
+    height:16px;
+    background:#e8e0e4;
+    border-radius:999px;
+    overflow:hidden;
+    margin-bottom:18px;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ff4f86,#ff9a76);
+    border-radius:999px;
+    transition:width .4s ease;
+}
+
+.status-message{
+    font-weight:700;
+    color:#78606b;
+    line-height:1.5;
+}
+
+.back-button,
+.reset-button{
+    margin-top:20px;
+    border:none;
+    border-radius:999px;
+    padding:12px 20px;
+    cursor:pointer;
+    font-weight:800;
+}
+
+.back-button{
+    background:white;
+    color:#8d3456;
+}
+
+.reset-button{
+    background:#ffebf2;
+    color:#d8346c;
+    margin-left:5px;
+}
+
+/* Carta */
+.letter-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(56,26,40,.72);
+    backdrop-filter:blur(7px);
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    opacity:0;
+    pointer-events:none;
+    transition:.5s;
+}
+
+.letter-overlay.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.envelope{
+    position:relative;
+    width:min(650px,95vw);
+    animation:letterEntrance .8s cubic-bezier(.18,.89,.32,1.28);
+}
+
+@keyframes letterEntrance{
+    from{
+        opacity:0;
+        transform:translateY(80px) scale(.75) rotate(-2deg);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1) rotate(0);
+    }
+}
+
+.letter{
+    position:relative;
+    z-index:3;
+    background:linear-gradient(145deg,#fffdfa,#fff2f6);
+    border-radius:32px;
+    padding:45px 45px 38px;
+    border:7px solid #ffc8d8;
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+    text-align:center;
+}
+
+.letter-heart{
+    font-size:3rem;
+    animation:heartbeat 1.1s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{ transform:scale(1); }
+    45%{ transform:scale(1.15); }
+}
+
+.letter h2{
+    color:#902653;
+    font-size:2.4rem;
+    margin:10px 0 22px;
+}
+
+.letter p{
+    font-size:1.08rem;
+    line-height:1.8;
+    color:#5f4651;
+    margin-bottom:17px;
+}
+
+.close-letter{
+    margin-top:10px;
+    border:none;
+    border-radius:999px;
+    padding:14px 34px;
+    background:linear-gradient(135deg,#ff4f83,#ff7594);
+    color:white;
+    cursor:pointer;
+    font-weight:800;
+    font-size:1rem;
+    box-shadow:0 10px 20px rgba(225,45,100,.25);
+}
+
+/* Confeti */
+.confetti{
+    position:fixed;
+    width:11px;
+    height:18px;
+    top:-25px;
+    z-index:2000;
+    pointer-events:none;
+    animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+    from{ transform:translateY(-20px) rotate(0deg); }
+    to{ transform:translateY(110vh) rotate(950deg); }
+}
+
+/* Responsive */
+@media(max-width:980px){
+    body{ overflow:auto; }
+
+    .screen{
+        position:absolute;
+        min-height:100vh;
+    }
+
+    .intro-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding-top:40px;
+    }
+
+    .intro-text{
+        order:2;
+        padding:30px;
+    }
+
+    .monkey-stage{
+        order:1;
+        min-height:530px;
+    }
+
+    .game-container{
+        grid-template-columns:1fr;
+    }
+
+    .status-panel{
+        width:min(500px,100%);
+        margin:auto;
+    }
+}
+
+@media(max-width:720px){
+    .cake-scene{
+        transform:scale(.72);
+        margin-bottom:-150px;
+    }
+
+    .cake-panel{
+        overflow:hidden;
+    }
+}
+
+@media(max-width:510px){
+    .monkey{
+        transform:scale(.8);
+    }
+
+    .monkey-stage{
+        min-height:450px;
+    }
+
+    .cake-scene{
+        transform:scale(.57);
+        margin-bottom:-230px;
+    }
+
+    .game-title{
+        font-size:2rem;
+    }
+
+    .letter{
+        padding:32px 22px;
+    }
+
+    .letter h2{
+        font-size:1.8rem;
+    }
+}
+
+
+.love-particles{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.floating-love{
+    position:absolute;
+    bottom:-50px;
+    opacity:0;
+    animation:loveFloat linear forwards;
+    filter:drop-shadow(0 4px 7px rgba(135,50,90,.12));
+}
+
+@keyframes loveFloat{
+    0%{
+        opacity:0;
+        transform:translateY(0) rotate(0deg) scale(.7);
+    }
+    12%{
+        opacity:.62;
+    }
+    78%{
+        opacity:.45;
+    }
+    100%{
+        opacity:0;
+        transform:translateY(-115vh) rotate(30deg) scale(1.18);
+    }
+}
+
+.love-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 15px;
+    margin-bottom:16px;
+    border-radius:999px;
+    background:rgba(255,255,255,.78);
+    color:#b53b6d;
+    font-size:.9rem;
+    font-weight:900;
+    box-shadow:0 8px 18px rgba(117,45,76,.10);
+    border:1px solid rgba(255,255,255,.85);
+}
+
+.romantic-line{
+    margin-top:-11px;
+    margin-bottom:25px !important;
+    color:#9e4c70 !important;
+    font-weight:700;
+    font-size:1rem !important;
+}
+
+.tiny-love-note{
+    margin-top:22px;
+    padding:14px 17px;
+    border-radius:18px;
+    background:linear-gradient(135deg,rgba(255,239,247,.9),rgba(255,250,235,.9));
+    border:1px solid rgba(255,255,255,.9);
+    color:#8b4663;
+    font-size:.95rem;
+    line-height:1.55;
+    box-shadow:0 8px 20px rgba(117,45,76,.08);
+}
+
+.love-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    margin:22px 0 8px;
+}
+
+.love-stat{
+    padding:11px 7px;
+    border-radius:16px;
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(255,255,255,.88);
+    box-shadow:0 7px 16px rgba(117,45,76,.07);
+}
+
+.love-stat strong{
+    display:block;
+    color:#e13e75;
+    font-size:1.15rem;
+    margin-bottom:3px;
+}
+
+.love-stat span{
+    color:#7b5868;
+    font-size:.76rem;
+    font-weight:700;
+}
+
+.progress-love{
+    margin-top:16px;
+    padding:12px 14px;
+    border-radius:16px;
+    background:#fff6fa;
+    color:#9c4b70;
+    font-size:.88rem;
+    line-height:1.45;
+    border:1px dashed #efafc9;
+}
+
+.letter-kicker{
+    color:#c84c79;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:.78rem;
+    font-weight:900;
+    margin-top:8px;
+}
+
+.letter-signature{
+    margin-top:21px;
+    font-size:1.04rem;
+    color:#913e61;
+    font-weight:800;
+    font-style:italic;
+}
+
+.final-detail-button{
+    margin-top:4px;
+    margin-bottom:10px;
+    border:none;
+    border-radius:999px;
+    padding:12px 22px;
+    background:#fff0f6;
+    color:#b83d6d;
+    font-weight:900;
+    cursor:pointer;
+    transition:.25s ease;
+    border:1px solid #ffd0e1;
+}
+
+.final-detail-button:hover{
+    transform:translateY(-2px) scale(1.02);
+    background:#ffe4ef;
+}
+
+.secret-note{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    transform:translateY(-6px);
+    transition:max-height .6s ease, opacity .5s ease, transform .5s ease;
+    margin:0;
+}
+
+.secret-note.show{
+    max-height:220px;
+    opacity:1;
+    transform:translateY(0);
+    margin:6px 0 14px;
+}
+
+.secret-note-inner{
+    padding:16px 18px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#fff1f7,#fff8e9);
+    border:1px dashed #ef9fbd;
+    color:#7e4960;
+    line-height:1.65;
+}
+
+.heart-pop{
+    position:fixed;
+    z-index:2500;
+    pointer-events:none;
+    font-size:20px;
+    animation:heartPop .9s ease-out forwards;
+    filter:drop-shadow(0 3px 5px rgba(135,50,90,.18));
+}
+
+@keyframes heartPop{
+    0%{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(.4);
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        transform:translate(var(--dx),var(--dy)) scale(1.25) rotate(var(--rot));
+    }
+}
+
+.sparkle-ring{
+    position:absolute;
+    width:84%;
+    height:66%;
+    left:8%;
+    top:8%;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:2;
+    opacity:.45;
+    border:1px dashed rgba(255,255,255,.65);
+    animation:ringPulse 3s ease-in-out infinite;
+}
+
+@keyframes ringPulse{
+    0%,100%{ transform:scale(.98); opacity:.3; }
+    50%{ transform:scale(1.02); opacity:.7; }
+}
+
+@media(max-width:510px){
+    .love-stats{
+        grid-template-columns:1fr;
+    }
+
+    .love-stat{
+        padding:8px;
+    }
+}
+
+
+
+.final-love-overlay{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(65,24,43,.62);
+    backdrop-filter:blur(8px);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .4s ease;
+}
+
+.final-love-overlay.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.final-love-card{
+    width:min(470px,92vw);
+    text-align:center;
+    padding:38px 28px 30px;
+    border-radius:30px;
+    background:
+        linear-gradient(145deg,#fffafc,#fff0f6);
+    border:4px solid #ffc9dc;
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+    animation:finalLovePop .65s cubic-bezier(.18,.89,.32,1.28);
+    position:relative;
+    overflow:hidden;
+}
+
+.final-love-card::before,
+.final-love-card::after{
+    content:"💗";
+    position:absolute;
+    font-size:3.2rem;
+    opacity:.12;
+}
+
+.final-love-card::before{
+    left:18px;
+    top:12px;
+    transform:rotate(-18deg);
+}
+
+.final-love-card::after{
+    right:18px;
+    bottom:10px;
+    transform:rotate(18deg);
+}
+
+@keyframes finalLovePop{
+    from{
+        opacity:0;
+        transform:scale(.72) translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+.final-love-emoji{
+    font-size:3.5rem;
+    margin-bottom:12px;
+    animation:heartbeat 1.1s infinite;
+}
+
+.final-love-card h2{
+    color:#a72f61;
+    font-size:clamp(1.8rem,5vw,2.5rem);
+    margin-bottom:12px;
+}
+
+.final-love-card p{
+    color:#75495c;
+    font-size:1.1rem;
+    line-height:1.65;
+    margin-bottom:20px;
+}
+
+.final-love-close{
+    border:none;
+    border-radius:999px;
+    padding:13px 28px;
+    background:linear-gradient(135deg,#ff5487,#ff7897);
+    color:white;
+    font-weight:900;
+    cursor:pointer;
+    font-size:1rem;
+    box-shadow:0 10px 22px rgba(225,45,100,.24);
+    transition:.25s ease;
+}
+
+.final-love-close:hover{
+    transform:translateY(-2px) scale(1.03);
+}
+
+
+/* =====================================================
+   RESPONSIVE PRO — PC + TELÉFONO
+   Mantiene el diseño original y adapta tamaños/espacios.
+===================================================== */
+
+:root{
+    --page-pad: clamp(12px, 2.4vw, 28px);
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
+}
+
+button{
+    min-height:44px;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:transparent;
+}
+
+.screen{
+    width:100%;
+    min-height:100vh;
+    min-height:100dvh;
+    padding:var(--page-pad);
+    overscroll-behavior:contain;
+}
+
+.intro-container,
+.game-container{
+    width:min(1200px, 100%);
+}
+
+/* ---------- PC / pantallas grandes ---------- */
+@media (min-width: 981px){
+
+    .intro-container{
+        grid-template-columns:minmax(360px, .95fr) minmax(410px, 1.05fr);
+        gap:clamp(28px, 4vw, 56px);
+    }
+
+    .intro-text{
+        padding:clamp(32px, 4vw, 48px);
+    }
+
+    .monkey-stage{
+        min-height:560px;
+    }
+
+    .game-container{
+        grid-template-columns:minmax(640px, 1fr) minmax(260px, 310px);
+        gap:clamp(20px, 3vw, 34px);
+    }
+
+    .cake-panel{
+        min-width:0;
+    }
+
+    .status-panel{
+        align-self:center;
+    }
+}
+
+/* ---------- Tablet y teléfono ---------- */
+@media (max-width: 980px){
+
+    body{
+        overflow:hidden;
+    }
+
+    .screen{
+        position:fixed !important;
+        inset:0;
+        overflow-x:hidden;
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+        align-items:flex-start;
+    }
+
+    .intro-container{
+        grid-template-columns:1fr;
+        gap:18px;
+        text-align:center;
+        padding:18px 0 30px;
+    }
+
+    .intro-text{
+        order:2;
+        width:min(620px, 100%);
+        margin:0 auto;
+        padding:clamp(22px, 5vw, 34px);
+        border-radius:28px;
+    }
+
+    .intro-text h1{
+        font-size:clamp(2.15rem, 8vw, 3.55rem);
+        line-height:1.04;
+    }
+
+    .intro-text p{
+        font-size:clamp(.96rem, 3.7vw, 1.08rem);
+    }
+
+    .love-badge{
+        max-width:100%;
+        justify-content:center;
+        text-align:center;
+        white-space:normal;
+    }
+
+    .monkey-stage{
+        order:1;
+        width:100%;
+        min-height:440px !important;
+        height:440px;
+        overflow:visible;
+        padding-top:8px;
+    }
+
+    /* scale es independiente de transform y no rompe la animación del mono */
+    .monkey{
+        scale:.78;
+        transform-origin:center top;
+    }
+
+    .game-container{
+        grid-template-columns:1fr !important;
+        width:100%;
+        gap:18px;
+        padding:10px 0 32px;
+    }
+
+    .cake-panel{
+        width:100%;
+        min-width:0;
+        padding:22px 12px 8px;
+        border-radius:28px;
+        overflow:hidden !important;
+    }
+
+    .game-title{
+        font-size:clamp(1.8rem, 7vw, 2.55rem);
+        line-height:1.05;
+        padding:0 8px;
+    }
+
+    .game-subtitle{
+        max-width:560px;
+        margin:8px auto 0;
+        padding:0 10px;
+        font-size:clamp(.92rem, 3.5vw, 1.04rem);
+        line-height:1.5;
+    }
+
+    /*
+       El pastel conserva sus proporciones originales.
+       Se centra y se escala completo para que no se deforme.
+    */
+    .cake-scene{
+        width:700px !important;
+        max-width:none !important;
+        height:590px;
+        left:50%;
+        transform:translateX(-50%) !important;
+        transform-origin:top center !important;
+        scale:.78;
+        margin-top:12px;
+        margin-bottom:-125px;
+    }
+
+    .status-panel{
+        width:min(560px, 100%) !important;
+        margin:0 auto !important;
+        padding:24px 18px;
+        border-radius:26px;
+    }
+
+    .counter{
+        font-size:clamp(2.35rem, 10vw, 3rem);
+    }
+
+    .love-stats{
+        grid-template-columns:repeat(3, minmax(0,1fr)) !important;
+    }
+
+    .love-stat{
+        min-width:0;
+        padding:10px 5px !important;
+    }
+
+    .love-stat span{
+        overflow-wrap:anywhere;
+    }
+
+    .back-button,
+    .reset-button{
+        min-width:120px;
+    }
+
+    /* Carta: se puede leer completa aunque el teléfono sea pequeño */
+    .letter-overlay,
+    .final-love-overlay{
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+        align-items:flex-start;
+        padding:14px;
+    }
+
+    .envelope{
+        width:min(650px, 100%);
+        margin:auto 0;
+    }
+
+    .letter{
+        width:100%;
+        max-height:calc(100dvh - 28px);
+        overflow-y:auto;
+        padding:30px 24px 26px;
+        border-width:5px;
+        border-radius:26px;
+    }
+
+    .letter h2{
+        font-size:clamp(1.75rem, 7vw, 2.25rem);
+    }
+
+    .letter p{
+        font-size:clamp(.96rem, 3.6vw, 1.06rem);
+        line-height:1.65;
+    }
+
+    .final-love-card{
+        width:min(470px, 100%);
+        margin:auto 0;
+        padding:30px 22px 24px;
+        max-height:calc(100dvh - 28px);
+        overflow-y:auto;
+    }
+
+    .final-love-close,
+    .close-letter,
+    .final-detail-button{
+        width:min(100%, 350px);
+    }
+}
+
+/* ---------- Teléfonos normales ---------- */
+@media (max-width: 600px){
+
+    :root{
+        --page-pad:10px;
+    }
+
+    .bg-balloon{
+        width:70px;
+        height:88px;
+        opacity:.32;
+    }
+
+    .bg-balloon::after{
+        top:82px;
+        height:110px;
+    }
+
+    .intro-container{
+        padding-top:8px;
+    }
+
+    .intro-text{
+        border-radius:24px;
+        padding:22px 17px 24px;
+    }
+
+    .intro-text h1{
+        font-size:clamp(2rem, 10vw, 2.75rem);
+    }
+
+    .tiny-love-note{
+        padding:12px 13px;
+        font-size:.9rem;
+    }
+
+    .start-button{
+        width:min(100%, 300px);
+        padding:14px 22px;
+    }
+
+    .monkey-stage{
+        height:365px;
+        min-height:365px !important;
+    }
+
+    .monkey{
+        scale:.64;
+    }
+
+    .cake-panel{
+        padding-top:19px;
+    }
+
+    .cake-scene{
+        scale:.56;
+        margin-top:8px;
+        margin-bottom:-250px;
+    }
+
+    .status-panel{
+        padding:20px 14px;
+    }
+
+    .progress-love{
+        font-size:.84rem;
+    }
+
+    .back-button,
+    .reset-button{
+        width:calc(50% - 6px);
+        min-width:0;
+        margin-left:0;
+        padding:11px 8px;
+    }
+
+    .reset-button{
+        margin-left:8px;
+    }
+
+    .letter{
+        padding:24px 16px 22px;
+        border-radius:22px;
+    }
+
+    .letter-heart{
+        font-size:2.5rem;
+    }
+
+    .letter-kicker{
+        letter-spacing:1.3px;
+        font-size:.7rem;
+    }
+
+    .secret-note-inner{
+        padding:13px;
+        font-size:.92rem;
+    }
+
+    .final-love-card{
+        border-radius:24px;
+        padding:26px 17px 22px;
+    }
+
+    .final-love-card h2{
+        font-size:clamp(1.7rem, 9vw, 2.1rem);
+    }
+
+    .final-love-card p{
+        font-size:.98rem;
+    }
+}
+
+/* ---------- Teléfonos muy angostos ---------- */
+@media (max-width: 390px){
+
+    .monkey-stage{
+        height:335px;
+        min-height:335px !important;
+    }
+
+    .monkey{
+        scale:.58;
+    }
+
+    .cake-scene{
+        scale:.50;
+        margin-bottom:-290px;
+    }
+
+    .love-stat strong{
+        font-size:1rem;
+    }
+
+    .love-stat span{
+        font-size:.68rem;
+    }
+
+    .status-panel{
+        border-radius:22px;
+    }
+}
+
+/* ---------- Teléfono horizontal ---------- */
+@media (max-height: 600px) and (orientation: landscape) and (max-width: 980px){
+
+    .intro-container{
+        grid-template-columns:.8fr 1.2fr;
+        align-items:center;
+        text-align:left;
+        gap:10px;
+        padding:5px 0 14px;
+    }
+
+    .intro-text{
+        order:1;
+        padding:18px;
+    }
+
+    .intro-text h1{
+        font-size:2rem;
+    }
+
+    .intro-text p{
+        font-size:.88rem;
+        margin-bottom:12px;
+    }
+
+    .tiny-love-note{
+        display:none;
+    }
+
+    .monkey-stage{
+        order:2;
+        height:330px;
+        min-height:330px !important;
+    }
+
+    .monkey{
+        scale:.57;
+    }
+
+    .game-container{
+        padding-top:4px;
+    }
+
+    .cake-scene{
+        scale:.52;
+        margin-bottom:-280px;
+    }
+}
+
+/* Accesibilidad: menos movimiento si el sistema lo pide */
+@media (prefers-reduced-motion: reduce){
+    *,
+    *::before,
+    *::after{
+        scroll-behavior:auto !important;
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+    }
+}
+
+
+/* =====================================================
+   AJUSTE DE CARTA EN TELÉFONO
+   Más compacta, centrada y agradable de leer.
+===================================================== */
+@media (max-width: 700px){
+
+    .letter-overlay{
+        padding:14px;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+    }
+
+    .envelope{
+        width:min(94vw, 540px) !important;
+        max-height:90dvh;
+        margin:0 auto;
+    }
+
+    .letter{
+        max-height:90dvh !important;
+        overflow-y:auto !important;
+        overscroll-behavior:contain;
+        -webkit-overflow-scrolling:touch;
+
+        padding:22px 18px 20px !important;
+        border-width:4px !important;
+        border-radius:24px !important;
+
+        text-align:center;
+        scrollbar-width:thin;
+    }
+
+    .letter-heart{
+        font-size:2.15rem !important;
+        margin-bottom:2px;
+    }
+
+    .letter-kicker{
+        font-size:.67rem !important;
+        letter-spacing:1.6px !important;
+        margin-top:2px !important;
+        margin-bottom:4px !important;
+    }
+
+    .letter h2{
+        font-size:clamp(1.55rem, 7vw, 1.95rem) !important;
+        line-height:1.12 !important;
+        margin:6px 0 16px !important;
+    }
+
+    .letter p{
+        font-size:.92rem !important;
+        line-height:1.55 !important;
+        margin-bottom:12px !important;
+    }
+
+    .letter-signature{
+        font-size:.95rem !important;
+        margin-top:12px !important;
+    }
+
+    .final-detail-button{
+        width:auto !important;
+        max-width:100%;
+        padding:10px 18px !important;
+        font-size:.9rem !important;
+        margin:2px auto 8px !important;
+    }
+
+    .secret-note{
+        margin:0 !important;
+    }
+
+    .secret-note.show{
+        margin:6px 0 10px !important;
+    }
+
+    .secret-note-inner{
+        padding:12px 13px !important;
+        font-size:.88rem !important;
+        line-height:1.5 !important;
+        border-radius:16px !important;
+    }
+
+    .close-letter{
+        position:sticky;
+        bottom:0;
+        z-index:8;
+
+        width:min(100%, 320px) !important;
+        margin:12px auto 0 !important;
+        padding:12px 18px !important;
+
+        font-size:.92rem !important;
+        box-shadow:
+            0 8px 18px rgba(225,45,100,.22),
+            0 -8px 18px rgba(255,255,255,.75);
+    }
+}
+
+@media (max-width: 390px){
+    .letter{
+        padding:18px 14px 16px !important;
+    }
+
+    .letter h2{
+        font-size:1.45rem !important;
+    }
+
+    .letter p{
+        font-size:.86rem !important;
+        line-height:1.48 !important;
+        margin-bottom:10px !important;
+    }
+
+    .letter-signature{
+        font-size:.9rem !important;
+    }
+
+    .secret-note-inner{
+        font-size:.84rem !important;
+    }
+}
+
+
+/* =====================================================
+   CARTA MODAL COMPACTA — PC + TELÉFONO
+   Evita que la carta ocupe casi toda la pantalla.
+===================================================== */
+
+/* Base para todas las pantallas */
+.letter-overlay{
+    align-items:center !important;
+    justify-content:center !important;
+    padding:20px !important;
+    overflow:hidden !important;
+}
+
+.envelope{
+    width:min(560px, 92vw) !important;
+    max-height:84vh !important;
+    max-height:84dvh !important;
+    margin:0 auto !important;
+}
+
+.letter{
+    width:100% !important;
+    max-height:84vh !important;
+    max-height:84dvh !important;
+    overflow-y:auto !important;
+    padding:26px 30px 24px !important;
+
+    border-width:5px !important;
+    border-radius:26px !important;
+
+    box-shadow:0 24px 65px rgba(0,0,0,.24) !important;
+
+    scrollbar-width:thin;
+    scrollbar-color:#f3a8c2 transparent;
+}
+
+/* Scroll bonito en Chrome / Edge */
+.letter::-webkit-scrollbar{
+    width:7px;
+}
+
+.letter::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.letter::-webkit-scrollbar-thumb{
+    background:#f3a8c2;
+    border-radius:99px;
+}
+
+/* Contenido más compacto */
+.letter-heart{
+    font-size:2.25rem !important;
+    margin-bottom:2px !important;
+}
+
+.letter-kicker{
+    font-size:.7rem !important;
+    letter-spacing:1.8px !important;
+    margin-top:2px !important;
+    margin-bottom:4px !important;
+}
+
+.letter h2{
+    font-size:2rem !important;
+    line-height:1.12 !important;
+    margin:6px 0 17px !important;
+}
+
+.letter p{
+    font-size:.95rem !important;
+    line-height:1.55 !important;
+    margin-bottom:11px !important;
+}
+
+.letter-signature{
+    margin-top:13px !important;
+    font-size:.96rem !important;
+}
+
+.final-detail-button{
+    width:auto !important;
+    min-width:170px;
+    padding:10px 18px !important;
+    margin:2px auto 8px !important;
+    font-size:.9rem !important;
+}
+
+.secret-note.show{
+    margin:6px 0 10px !important;
+}
+
+.secret-note-inner{
+    padding:12px 14px !important;
+    font-size:.88rem !important;
+    line-height:1.5 !important;
+}
+
+.close-letter{
+    position:sticky !important;
+    bottom:0 !important;
+    z-index:10 !important;
+
+    display:block !important;
+    width:min(100%, 280px) !important;
+
+    margin:12px auto 0 !important;
+    padding:11px 18px !important;
+
+    font-size:.9rem !important;
+
+    box-shadow:
+        0 8px 18px rgba(225,45,100,.22),
+        0 -10px 18px rgba(255,247,250,.9) !important;
+}
+
+/* PC grande: un poquito más espaciosa, pero sigue siendo tarjeta */
+@media (min-width: 1000px){
+    .envelope{
+        width:min(590px, 82vw) !important;
+        max-height:82vh !important;
+        max-height:82dvh !important;
+    }
+
+    .letter{
+        max-height:82vh !important;
+        max-height:82dvh !important;
+        padding:28px 34px 24px !important;
+    }
+
+    .letter h2{
+        font-size:2.08rem !important;
+    }
+
+    .letter p{
+        font-size:.96rem !important;
+    }
+}
+
+/* Laptop con poca altura */
+@media (min-width: 701px) and (max-height: 780px){
+    .envelope{
+        width:min(540px, 88vw) !important;
+        max-height:78vh !important;
+        max-height:78dvh !important;
+    }
+
+    .letter{
+        max-height:78vh !important;
+        max-height:78dvh !important;
+        padding:22px 28px 20px !important;
+    }
+
+    .letter-heart{
+        font-size:1.95rem !important;
+    }
+
+    .letter h2{
+        font-size:1.78rem !important;
+        margin-bottom:13px !important;
+    }
+
+    .letter p{
+        font-size:.9rem !important;
+        line-height:1.48 !important;
+        margin-bottom:9px !important;
+    }
+}
+
+/* Teléfono */
+@media (max-width: 700px){
+    .letter-overlay{
+        padding:12px !important;
+    }
+
+    .envelope{
+        width:min(94vw, 500px) !important;
+        max-height:88dvh !important;
+    }
+
+    .letter{
+        max-height:88dvh !important;
+        padding:20px 16px 18px !important;
+        border-width:4px !important;
+        border-radius:22px !important;
+    }
+
+    .letter-heart{
+        font-size:2rem !important;
+    }
+
+    .letter-kicker{
+        font-size:.64rem !important;
+        letter-spacing:1.3px !important;
+    }
+
+    .letter h2{
+        font-size:clamp(1.45rem, 7vw, 1.8rem) !important;
+        margin:5px 0 13px !important;
+    }
+
+    .letter p{
+        font-size:.88rem !important;
+        line-height:1.5 !important;
+        margin-bottom:10px !important;
+    }
+
+    .letter-signature{
+        font-size:.9rem !important;
+        margin-top:10px !important;
+    }
+
+    .secret-note-inner{
+        font-size:.84rem !important;
+        padding:11px 12px !important;
+    }
+
+    .close-letter{
+        width:min(100%, 270px) !important;
+    }
+}
+
+
+/* =====================================================
+   FIX DEFINITIVO DEL PASTEL EN MÓVIL
+   - Lo centra correctamente.
+   - Evita que se corte del lado derecho.
+   - Mantiene las 22 velas dentro del pastel.
+===================================================== */
+
+/* Tablet */
+@media (min-width: 701px) and (max-width: 980px){
+    .cake-panel{
+        overflow:hidden !important;
+    }
+
+    .cake-scene{
+        width:700px !important;
+        max-width:none !important;
+
+        left:50% !important;
+        margin-left:0 !important;
+
+        /* Todo en un solo transform para evitar el desplazamiento lateral */
+        transform:translateX(-50%) scale(.76) !important;
+        scale:none !important;
+
+        transform-origin:top center !important;
+
+        margin-top:10px !important;
+        margin-bottom:-135px !important;
+    }
+}
+
+/* Teléfonos */
+@media (max-width: 700px){
+    .cake-panel{
+        overflow:hidden !important;
+        padding-left:8px !important;
+        padding-right:8px !important;
+    }
+
+    .cake-scene{
+        width:700px !important;
+        max-width:none !important;
+
+        left:50% !important;
+        margin-left:0 !important;
+
+        transform:translateX(-50%) scale(.48) !important;
+        scale:none !important;
+
+        transform-origin:top center !important;
+
+        margin-top:14px !important;
+        margin-bottom:-292px !important;
+    }
+}
+
+/* Teléfonos un poco más anchos */
+@media (min-width: 500px) and (max-width: 700px){
+    .cake-scene{
+        transform:translateX(-50%) scale(.56) !important;
+        margin-bottom:-250px !important;
+    }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 390px){
+    .cake-scene{
+        transform:translateX(-50%) scale(.45) !important;
+        margin-bottom:-310px !important;
+    }
+}
+
+/* Evita scroll horizontal accidental en toda la experiencia */
+html,
+body,
+.screen,
+.game-container,
+.cake-panel{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   FIX REAL DEL PASTEL RESPONSIVE (Brave / Chrome / móvil)
+   Ya no escalamos .cake-scene con media queries.
+   El contenedor ocupa el ancho disponible y JS escala
+   únicamente el dibujo interno de 700x590.
+===================================================== */
+
+.cake-panel{
+    overflow:hidden !important;
+}
+
+.cake-scene{
+    position:relative !important;
+    width:100% !important;
+    max-width:700px !important;
+    height:590px;
+    margin:0 auto !important;
+    left:auto !important;
+    transform:none !important;
+    scale:none !important;
+    overflow:visible !important;
+}
+
+.cake-scale-inner{
+    position:absolute;
+    left:50%;
+    top:0;
+    width:700px;
+    height:590px;
+    transform:translateX(-50%) scale(1);
+    transform-origin:top center;
+    will-change:transform;
+}
+
+/* Anulamos los intentos anteriores de escalar el pastel completo */
+@media (max-width:980px){
+    .cake-scene{
+        width:100% !important;
+        max-width:700px !important;
+        height:590px;
+        left:auto !important;
+        margin:10px auto 0 !important;
+        transform:none !important;
+        scale:none !important;
+    }
+}
+
+@media (max-width:700px){
+    .cake-panel{
+        padding-left:10px !important;
+        padding-right:10px !important;
+    }
+
+    .cake-scene{
+        margin-top:8px !important;
+        margin-bottom:0 !important;
+    }
+}
+
+@media (max-width:390px){
+    .cake-scene{
+        margin-bottom:0 !important;
+    }
+}
+
+
+/* =====================================================
+   AJUSTE DEL MONITO
+   Lo bajamos un poco sin romper su animación flotante.
+===================================================== */
+
+.monkey{
+    top:14px;
+}
+
+@media (max-width:980px){
+    .monkey{
+        top:26px;
+    }
+}
+
+@media (max-width:600px){
+    .monkey{
+        top:34px;
+    }
+}
+
+@media (max-width:390px){
+    .monkey{
+        top:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="love-particles" id="loveParticles"></div>
+
+<div class="bg-balloon balloon1"></div>
+<div class="bg-balloon balloon2"></div>
+<div class="bg-balloon balloon3"></div>
+
+<!-- PESTAÑA 1 -->
+<section class="screen show" id="introScreen">
+    <div class="intro-container">
+
+        <div class="intro-text">
+            <div class="love-badge">💌 Hecho con muchísimo cariño para ti</div>
+
+            <h1>¡Feliz cumpleaños Flaquita linda! 🎉</h1>
+
+            <p class="romantic-line">
+                Para la chica que hace mis días más bonitos 💗
+            </p>
+
+            <p>
+                Hoy viene este monito a entregarte este pastelito que ha hecho con mucho cariño para ti, el cual hizo especialmente para ti con
+                <strong>22 velitas</strong> esperando por ti.
+            </p>
+
+            <div class="tiny-love-note">
+                ✨ Un cumpleaños dura un día, pero espero que esta nueva vuelta
+                al sol esté llena de recuerdos que quieras guardar para siempre.
+            </div>
+
+            <br>
+
+            <button class="start-button" id="startButton">
+                Ver tu pastel 🎂
+            </button>
+        </div>
+
+        <div class="monkey-stage">
+            <div class="monkey">
+                <div class="monkey-ear left"></div>
+                <div class="monkey-ear right"></div>
+                <div class="monkey-head"></div>
+                <div class="monkey-face"></div>
+                <div class="monkey-eye left"></div>
+                <div class="monkey-eye right"></div>
+                <div class="monkey-nose"></div>
+                <div class="monkey-mouth"></div>
+                <div class="monkey-body"></div>
+                <div class="monkey-belly"></div>
+                <div class="monkey-arm left"></div>
+                <div class="monkey-arm right"></div>
+
+                <div class="monkey-cake">
+                    <div class="monkey-cake-plate"></div>
+                    <div class="monkey-cake-body"></div>
+                    <div class="monkey-cake-cream1"></div>
+                    <div class="monkey-cake-cream2"></div>
+                    <div class="monkey-cake-red"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PESTAÑA 2 2 -->
+<section class="screen hide" id="gameScreen">
+    <div class="game-container">
+
+        <div class="cake-panel">
+            <h2 class="game-title">Apaga las velas si? 🎂</h2>
+
+            <p class="game-subtitle">
+                Toca para soplar la velas.
+                Cuando todas estén apagadas, aparecerá algo para ti.
+            </p>
+
+            <div class="cake-scene" id="cakeScene">
+                <div class="cake-scale-inner" id="cakeScaleInner">
+                    <div class="sparkle-ring"></div>
+                    <div class="big-plate"></div>
+                    <div class="cake-body"></div>
+                    <div class="cream-band one"></div>
+                    <div class="cream-band two"></div>
+                    <div class="red-icing"></div>
+                    <div class="sprinkles" id="sprinkles"></div>
+                    <div class="candles" id="candlesContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="status-panel">
+            <div class="love-badge">💕 unas pequeñas luces para ti</div>
+
+            <h3>Velas apagadas</h3>
+
+            <div class="counter" id="counter">
+                0 / 22
+            </div>
+
+            <div class="progress">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="status-message" id="statusMessage">
+                Empieza con la primera velita ✨
+            </div>
+
+            <div class="love-stats">
+                <div class="love-stat">
+                    <strong>22</strong>
+                    <span>velitas</span>
+                </div>
+                <div class="love-stat">
+                    <strong>∞</strong>
+                    <span>momentos</span>
+                </div>
+                <div class="love-stat">
+                    <strong>1</strong>
+                    <span>persona especial</span>
+                </div>
+            </div>
+
+            <div class="progress-love" id="progressLove">
+                Cada velita apagada te acerca a algo que quería decirte 💗
+            </div>
+
+            <button class="back-button" id="backButton">
+                ← Volver
+            </button>
+
+            <button class="reset-button" id="resetButton">
+                Reiniciar
+            </button>
+        </aside>
+
+    </div>
+</section>
+
+<!-- CARTA -->
+<div class="letter-overlay" id="letterOverlay">
+    <div class="envelope">
+        <div class="letter">
+            <div class="letter-heart">💗</div>
+            <div class="letter-kicker">Para mi persona favorita</div>
+
+            <h2>Feliz cumpleaños, mi colochita hermosa</h2>
+
+            <p>
+                Hoy celebramos un nuevo año mas de vida, pero yo también celebro
+                la suerte de poder compartir contigo tus sonrisas, tus ocurrencias,
+                tus sueños y todos esos pequeños momentos que terminan siendo mis favoritos.
+            </p>
+
+            <p>
+                Deseo que esta nueva etapa te traiga cosas preciosas: tranquilidad,
+                aventuras, metas cumplidas, risas inesperadas y muchísimas razones
+                para sentirte orgullosa de la persona que eres.
+            </p>
+
+            <p>
+                Y cuando algún día no sea tan bonito, quiero que recuerdes que
+                sigues siendo una persona increíble, importante y muy querida.
+                Espero poder seguir creando contigo recuerdos que nos hagan sonreír
+                incluso mucho tiempo después. 💕
+            </p>
+
+            <p>
+                Gracias por formar parte de mi vida y por hacerla un poquito más bonita
+                simplemente siendo tú.
+            </p>
+
+            <p>
+                <strong>Que este nuevo año sea comienzo de algo precioso para ti. 🎂✨</strong>
+            </p>
+
+            <div class="letter-signature">
+                Con todo mi cariño, para ti. 💗
+            </div>
+
+            <br>
+
+            <button class="final-detail-button" id="finalDetailButton">
+                Un último detallito 💌
+            </button>
+
+            <div class="secret-note" id="secretNote">
+                <div class="secret-note-inner">
+                    Si pudiera pedir yo también un deseo al apagar estas velas,
+                    pediría seguir viendo esa sonrisa muchas veces más y poder
+                    acompañarte en un montón de momentos bonitos. Te amo flaca. 💗
+                </div>
+            </div>
+
+            <button class="close-letter" id="closeLetter">
+                toca aqui tambien 💗
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- MENSAJE FINAL -->
+<div class="final-love-overlay" id="finalLoveOverlay">
+    <div class="final-love-card">
+        <div class="final-love-emoji">💗</div>
+        <h2>Te quiero mucho, flaquita</h2>
+        <p>
+            Y espero que nunca olvides lo especial que eres para mí.
+            Feliz cumpleaños, mi amor. ✨
+        </p>
+        <button class="final-love-close" id="finalLoveClose">
+            💕 pasa un bonito cumpleaños flaquita.
+        </button>
+    </div>
+</div>
+
+<script>
+const introScreen = document.getElementById("introScreen");
+const gameScreen = document.getElementById("gameScreen");
+const startButton = document.getElementById("startButton");
+const backButton = document.getElementById("backButton");
+const resetButton = document.getElementById("resetButton");
+const candlesContainer = document.getElementById("candlesContainer");
+const sprinkles = document.getElementById("sprinkles");
+const counter = document.getElementById("counter");
+const progressFill = document.getElementById("progressFill");
+const statusMessage = document.getElementById("statusMessage");
+const letterOverlay = document.getElementById("letterOverlay");
+const closeLetter = document.getElementById("closeLetter");
+const finalDetailButton = document.getElementById("finalDetailButton");
+const secretNote = document.getElementById("secretNote");
+const loveParticles = document.getElementById("loveParticles");
+const progressLove = document.getElementById("progressLove");
+const finalLoveOverlay = document.getElementById("finalLoveOverlay");
+const finalLoveClose = document.getElementById("finalLoveClose");
+const cakeScene = document.getElementById("cakeScene");
+const cakeScaleInner = document.getElementById("cakeScaleInner");
+
+const TOTAL_CANDLES = 22;
+let blownCandles = 0;
+
+const candlePositions = [
+   
+    {x: 5,  y: 54},
+    {x: 14, y: 44},
+    {x: 23, y: 56},
+    {x: 32, y: 40},
+    {x: 41, y: 53},
+    {x: 50, y: 40},
+    {x: 59, y: 55},
+    {x: 68, y: 44},
+    {x: 77, y: 56},
+    {x: 86, y: 48},
+
+  
+    {x: 9,  y: 72},
+    {x: 20, y: 66},
+    {x: 31, y: 74},
+    {x: 42, y: 66},
+    {x: 53, y: 74},
+    {x: 64, y: 66},
+    {x: 75, y: 74},
+    {x: 86, y: 67},
+
+   
+    {x: 16, y: 90},
+    {x: 37, y: 86},
+    {x: 58, y: 90},
+    {x: 79, y: 87}
+];
+
+
+function fitCakeToScreen(){
+    if(!cakeScene || !cakeScaleInner) return;
+
+    /* El dibujo original mide 700 x 590.
+       Tomamos el ancho REAL disponible dentro de la tarjeta. */
+    const availableWidth = Math.max(260, cakeScene.clientWidth);
+
+    /* Dejamos un pequeño margen para que nunca toque los bordes. */
+    const safeWidth = Math.max(250, availableWidth - 8);
+
+    /* En PC nunca crece más de 1; en teléfono se reduce exactamente lo necesario. */
+    const scale = Math.min(1, safeWidth / 700);
+
+    cakeScaleInner.style.transform =
+        `translateX(-50%) scale(${scale})`;
+
+    /* Ajustamos también la altura del contenedor al tamaño visible real,
+       para que no quede un hueco enorme debajo del pastel. */
+    cakeScene.style.height = `${590 * scale}px`;
+}
+
+/* Brave/Chrome móvil cambia el viewport al mostrar/ocultar barras.
+   ResizeObserver hace que el pastel se recalcule automáticamente. */
+if("ResizeObserver" in window){
+    const cakeObserver = new ResizeObserver(()=>{
+        fitCakeToScreen();
+    });
+    cakeObserver.observe(cakeScene);
+}
+
+window.addEventListener("resize", fitCakeToScreen);
+window.addEventListener("orientationchange", ()=>{
+    setTimeout(fitCakeToScreen, 150);
+});
+
+function createCandles(){
+    candlesContainer.innerHTML = "";
+    blownCandles = 0;
+    updateStatus();
+
+    candlePositions.forEach((position,index)=>{
+        const candle = document.createElement("div");
+        candle.className = "candle";
+
+        candle.style.left = `calc(${position.x}% - 8px)`;
+        candle.style.top = `${position.y}px`;
+        candle.dataset.index = index;
+
+        const wick = document.createElement("div");
+        wick.className = "wick";
+
+        const flame = document.createElement("div");
+        flame.className = "flame";
+
+        const smoke = document.createElement("div");
+        smoke.className = "smoke";
+
+        candle.appendChild(wick);
+        candle.appendChild(flame);
+        candle.appendChild(smoke);
+
+        candle.addEventListener("click",(event)=> blowCandle(candle,event));
+
+        candlesContainer.appendChild(candle);
+    });
+}
+
+function blowCandle(candle,event){
+    if(candle.classList.contains("off")){
+        return;
+    }
+
+    candle.classList.add("off");
+    blownCandles++;
+
+    if(event){
+        createHeartBurst(event.clientX,event.clientY);
+    }
+
+    updateStatus();
+
+    if(blownCandles === TOTAL_CANDLES){
+        statusMessage.textContent = "¡Las apagaste todas! 🎉💗";
+        progressLove.textContent = "Ahora sí… hay algo que quería decirte 💌";
+
+        setTimeout(()=>{
+            celebrate();
+        },900);
+    }
+}
+
+function updateStatus(){
+    counter.textContent = `${blownCandles} / ${TOTAL_CANDLES}`;
+
+    const percentage = (blownCandles / TOTAL_CANDLES) * 100;
+    progressFill.style.width = percentage + "%";
+
+    if(blownCandles === 0){
+        statusMessage.textContent = "Empieza con la primera velita ✨";
+        progressLove.textContent = "Cada velita apagada te acerca a algo que quería decirte 💗";
+    } else if(blownCandles < 6){
+        statusMessage.textContent = "Cada una guarda un poquito de cariño 💕";
+        progressLove.textContent = "Vas empezando… todavía quedan varias sorpresitas encendidas.";
+    } else if(blownCandles < 12){
+        statusMessage.textContent = "Mira cuántas lucecitas ya apagaste ✨";
+        progressLove.textContent = "Mitad de camino: espero que estés sonriendo aunque sea un poquito 💗";
+    } else if(blownCandles < 18){
+        statusMessage.textContent = "Ya falta poquito, mi amor 🎂";
+        progressLove.textContent = "Cada vez estás más cerca de la carta que preparé para ti.";
+    } else if(blownCandles < 22){
+        statusMessage.textContent = "¡Últimas velitas! 💗";
+        progressLove.textContent = "Casi, casi… apaga las últimas con un deseo bonito.";
+    }
+}
+
+const sprinklePositions = [
+    [4,45],[11,24],[18,62],[27,38],[34,72],
+    [42,31],[49,58],[57,18],[63,68],[70,35],
+    [78,59],[85,21],[92,50],[9,78],[24,14],
+    [39,49],[52,78],[67,7],[82,78],[96,28]
+];
+
+function createSprinkles(){
+    sprinkles.innerHTML="";
+
+    sprinklePositions.forEach(position=>{
+        const dot = document.createElement("div");
+        dot.className = "sprinkle";
+        dot.style.left = position[0] + "%";
+        dot.style.top = position[1] + "px";
+        sprinkles.appendChild(dot);
+    });
+}
+
+startButton.addEventListener("click",()=>{
+    introScreen.classList.remove("show");
+    introScreen.classList.add("hide");
+
+    gameScreen.classList.remove("hide");
+    gameScreen.classList.add("show");
+
+    /* Esperamos a que la pantalla sea visible y luego medimos. */
+    requestAnimationFrame(()=>{
+        requestAnimationFrame(fitCakeToScreen);
+    });
+});
+
+backButton.addEventListener("click",()=>{
+    gameScreen.classList.remove("show");
+    gameScreen.classList.add("hide");
+
+    introScreen.classList.remove("hide");
+    introScreen.classList.add("show");
+});
+
+resetButton.addEventListener("click",()=>{
+    createCandles();
+    letterOverlay.classList.remove("show");
+});
+
+function createHeartBurst(x,y){
+    const icons = ["💗","💕","✨","💖"];
+
+    for(let i=0;i<6;i++){
+        const heart = document.createElement("div");
+        heart.className = "heart-pop";
+        heart.textContent = icons[Math.floor(Math.random()*icons.length)];
+        heart.style.left = x + "px";
+        heart.style.top = y + "px";
+        heart.style.setProperty("--dx", (Math.random()*120 - 60) + "px");
+        heart.style.setProperty("--dy", (-50 - Math.random()*90) + "px");
+        heart.style.setProperty("--rot", (Math.random()*60 - 30) + "deg");
+
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),950);
+    }
+}
+
+function spawnFloatingLove(){
+    const symbols = ["♡","♥","✦","♡","✨"];
+    const item = document.createElement("span");
+
+    item.className = "floating-love";
+    item.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    item.style.left = (Math.random()*96 + 2) + "%";
+    item.style.fontSize = (13 + Math.random()*15) + "px";
+    item.style.color = Math.random() > .5 ? "#e55d8c" : "#f5a4bc";
+    item.style.animationDuration = (6 + Math.random()*5) + "s";
+
+    loveParticles.appendChild(item);
+
+    setTimeout(()=>{
+        item.remove();
+    },11500);
+}
+
+function celebrate(){
+    createConfetti(150);
+    letterOverlay.classList.add("show");
+}
+
+function createConfetti(amount){
+    const colors = [
+        "#ff4f84",
+        "#ffd33d",
+        "#5ecbff",
+        "#ba79ff",
+        "#60e39a",
+        "#ff8b44"
+    ];
+
+    for(let i=0;i<amount;i++){
+        const piece = document.createElement("div");
+        piece.className = "confetti";
+
+        piece.style.left = Math.random()*100 + "vw";
+        piece.style.background = colors[Math.floor(Math.random()*colors.length)];
+        piece.style.animationDuration = (Math.random()*2 + 2.5) + "s";
+        piece.style.animationDelay = (Math.random()*.8) + "s";
+        piece.style.borderRadius = Math.random()>.5 ? "50%" : "2px";
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+            piece.remove();
+        },5500);
+    }
+}
+
+finalDetailButton.addEventListener("click",()=>{
+    secretNote.classList.toggle("show");
+
+    if(secretNote.classList.contains("show")){
+        finalDetailButton.textContent = "Para ti, siempre 💗";
+        createConfetti(35);
+    }
+});
+
+closeLetter.addEventListener("click",()=>{
+
+    letterOverlay.classList.remove("show");
+    finalLoveOverlay.classList.add("show");
+    createConfetti(45);
+
+    secretNote.classList.remove("show");
+    finalDetailButton.textContent = "Un último detallito 💌";
+});
+
+finalLoveClose.addEventListener("click",()=>{
+    finalLoveOverlay.classList.remove("show");
+
+  
+    gameScreen.classList.remove("show");
+    gameScreen.classList.add("hide");
+
+    introScreen.classList.remove("hide");
+    introScreen.classList.add("show");
+
+    letterOverlay.classList.remove("show");
+    secretNote.classList.remove("show");
+    finalDetailButton.textContent = "Un último detallito 💌";
+    createCandles();
+});
+
+setInterval(spawnFloatingLove,1100);
+
+for(let i=0;i<8;i++){
+    setTimeout(spawnFloatingLove,i*220);
+}
+
+createCandles();
+createSprinkles();
+fitCakeToScreen();
+</script>
+
+</body>
+</html>
